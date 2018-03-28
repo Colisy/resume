@@ -1,0 +1,85 @@
+*{margin: 0; padding: 0;}
+*{box-sizing: border-box;}
+*::before{box-sizing: border-box;}
+*::after{box-sizing: border-box;}
+
+* {
+  transition: all .3s;
+}
+
+html {
+  color: rgb(222,222,222);
+  background: rgb(0,43,54);
+}
+
+.styleEditor {
+  padding: .5em;
+  border: 1px solid;
+  overflow: auto;
+  width: 90vw;
+  margin: 2.5vh 5vw;
+  height: 90vh;
+  display: none;
+}
+
+.styleEditor {
+  height: 45vh;
+}
+
+.token.selector{
+  color: rgb(133,153,0);
+}
+.token.property{
+  color: rgb(187,137,0);
+}
+.token.punctuation{
+  color: yellow;
+}
+.token.function{
+  color: rgb(42,161,152);
+}
+
+html{
+  perspective: 1000px;
+}
+.styleEditor {
+  position: fixed; left: 0; top: 0;
+  transform: rotateX(-10deg) translateZ(-50px) ;
+}
+.resumeEditor{
+  position: fixed;
+  left: 0;
+  padding: .5em;  margin: 2.5vh;
+  width: 92vw; height: 95vh;
+  border: 1px solid;
+  background: white; color: #222;
+  overflow: auto;
+}
+.resumeEditor{
+  padding: 2em;
+}
+.resumeEditor h2{
+  display: inline-block;
+  border-bottom: 1px solid;
+  margin: 1em 0 .5em;
+}
+.resumeEditor ul,.resumeEditor ol{
+  list-style: none;
+}
+.resumeEditor ul> li::before{
+  content: '•';
+  margin-right: .5em;
+}
+.resumeEditor ol {
+  counter-reset: section;
+}
+.resumeEditor ol li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  margin-right: .5em;
+}
+.resumeEditor blockquote {
+  margin: 1em;
+  padding: .5em;
+  background: #ddd;
+}
